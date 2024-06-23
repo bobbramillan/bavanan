@@ -12,17 +12,25 @@
 <div id=header>
     <div class="container">
         <nav>
-            <img src="images/bav.png" class="logo"> <!--basically my name as the big logo -->
-            <ul id="sidemenu">
+            <a href="#" class="logo"><img src="images/bav.png" alt="Logo"></a>
+            <ul class="main-menu">
                 <li><a href="#header">Home 🏠</a></li>
                 <li><a href="#about">About 🧑</a></li>
                 <li><a href="#experiences">Experiences 💼</a></li>
                 <li><a href="#projects">Projects 📁</a></li>
                 <li><a href="#contact">Contact ☎️</a></li>
-                <i class="fa-solid fa-caret-up" onclick="closemenu()"></i>
             </ul>
-            <i class="fa-solid fa-caret-down" onclick="openmenu()"></i>
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
+        <!-- JavaScript for menu toggle -->
+        <script>
+            function toggleMenu() {
+                var menu = document.querySelector('.main-menu');
+                menu.classList.toggle('show');
+            }
+        </script>
         <div class="header-text">
             <p>Data Science Student at Drexel</p>
             <h1>Hi, I'm <span>Bavanan</span><br>From Queens🗽</h1>
